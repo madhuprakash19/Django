@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Users Data</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+</head>
+<body>
+	<h1>The user data is being loaded by model.py from django</h1>
+	<div>
+		{% if users_list %}
+		<ol>
+		{% for usr in users_list %}
+		
+			<li>
+			<p>User info: </p>
+			<ul>First name: {{ usr.first_name }}</ul>
+			<ul>Last name : {{ usr.last_name }}</ul>
+			<ul>Email : {{ usr.email }} </ul>
+			<br>
+			<br>
+			</li>
+		
+		{% endfor %}
+		</ol>
+		{% else %}
+		<p>Sorry unable to load the Users Data</p>
+		{% endif %}
+	</div>
+
+</body>
+</html>
