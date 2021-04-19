@@ -1,0 +1,17 @@
+<<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <h1>Welcome To signup page</h1>
+    <form  method="POST">
+      {{ form.as_p}}
+      {% csrf_token %}
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+  </body>
+</html>
